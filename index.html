@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julia Mendes · Fotografia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== NAV ====== -->
+  <header id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Julia Mendes</a>
+      <nav class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#videos">Vídeos</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato" class="nav-cta">Orçamento</a>
+      </nav>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#sobre" class="mobile-link">Sobre</a>
+      <a href="#portfolio" class="mobile-link">Portfólio</a>
+      <a href="#videos" class="mobile-link">Vídeos</a>
+      <a href="#processo" class="mobile-link">Processo</a>
+      <a href="#contato" class="mobile-link">Orçamento</a>
+    </div>
+  </header>
+
+  <!-- ====== HERO + CARROSSEL ====== -->
+  <section id="hero">
+    <div class="carousel" id="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- 7 slides com imagens placeholder de fotografia -->
+        <div class="carousel-slide">
+          <img src="./img/carro1.jpg" alt="Fotografia 1" />
+        </div>
+        <div class="carousel-slide">
+          <img src="./img/carro2.jpeg" alt="Fotografia 2" />
+        </div>
+        <div class="carousel-slide">
+          <img src="./img/carro3.jpeg" alt="Fotografia 3" />
+        </div>
+        <div class="carousel-slide">
+          <img src="./img/carro4.jpeg" alt="Fotografia 4" />
+        </div>
+        <div class="carousel-slide">
+          <img src="./img/carro15.jpeg" alt="Fotografia 5" />
+        </div>
+        <div class="carousel-slide">
+          <img src="./img/carro16.jpeg" alt="Fotografia 6" />
+        </div>
+        <div class="carousel-slide">
+          <img src="./img/carro17.jpeg" alt="Fotografia 7" />
+        </div>
+      </div>
+
+      <!-- Dots -->
+      <div class="carousel-dots" id="carouselDots"></div>
+
+      <!-- Arrows -->
+      <button class="carousel-arrow carousel-prev" id="carouselPrev" aria-label="Anterior">&#8592;</button>
+      <button class="carousel-arrow carousel-next" id="carouselNext" aria-label="Próximo">&#8594;</button>
+
+      <!-- Hero overlay text -->
+      <div class="hero-overlay">
+        <p class="hero-tagline">Fotografia</p>
+        <h1 class="hero-name">Julia Mendes</h1>
+        <p class="hero-sub">Transformando momentos em memórias eternas.</p>
+        <div class="hero-btns">
+          <a href="#contato" class="btn btn-primary">Solicitar orçamento</a>
+          <a href="#portfolio" class="btn btn-secondary">Ver portfólio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SOBRE ====== -->
+  <section id="sobre" class="section-sobre">
+    <div class="container sobre-grid">
+      <div class="sobre-img-wrap reveal">
+        <img src="./img/fotografa.png" alt="Julia Mendes" class="sobre-img" />
+        <div class="sobre-img-accent"></div>
+      </div>
+      <div class="sobre-text reveal">
+        <span class="section-label">Prazer, eu sou</span>
+        <h2 class="section-title">Julia Mendes</h2>
+        <p class="sobre-bio">
+          Fotógrafa apaixonada por histórias reais, emoções autênticas e a beleza que existe nos detalhes. 
+          Com mais de 2 anos de experiência, já registrei centenas de casamentos, ensaios e momentos especiais 
+          que as pessoas guardam para sempre.
+        </p>
+        <p class="sobre-bio">
+          Meu trabalho vai além do clique — é sobre criar uma conexão genuína com cada cliente, 
+          para que as fotos reflitam exatamente quem vocês são.
+        </p>
+        <div class="sobre-stats">
+          <div class="stat">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Anos de experiência</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Sessões realizadas</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Clientes satisfeitos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PORTFOLIO FOTOS ====== -->
+  <section id="portfolio" class="section-portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Trabalhos</span>
+        <h2 class="section-title">Portfólio</h2>
+      </div>
+
+      <!-- Filtros -->
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="casamentos">Casamentos</button>
+        <button class="filter-btn" data-filter="ensaios">Ensaios</button>
+        <button class="filter-btn" data-filter="eventos">Eventos</button>
+        <button class="filter-btn" data-filter="familia">Família</button>
+        <button class="filter-btn" data-filter="corporativo">Corporativo</button>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item" data-cat="ensaios">
+          <img src="./img/pessoa1.jpeg" alt="pessoa" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+        <div class="portfolio-item tall" data-cat="ensaios">
+          <img src="./img/pessoa2.jpeg" alt="pessoa" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+        <div class="portfolio-item" data-cat="ensaios">
+          <img src="./img/pessoa3.jpeg" alt="pessoa" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+        <div class="portfolio-item wide" data-cat="ensaios">
+          <img src="./img/pessoa4.jpeg" alt="pessoa" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+        <div class="portfolio-item" data-cat="ensaios">
+          <img src="./img/pessoa5.jpeg" alt="pessoa" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+        <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro24.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+        <div class="portfolio-item tall" data-cat="corporativo">
+          <img src="./img/carro23.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+        <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro23.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+        <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro22.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro4.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro5.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro6.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro7.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro8.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro9.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro10.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro11.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro12.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro13.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro14.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro15.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro16.jpeg" alt="Casamento 1" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro18.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro19.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro20.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="corporativo">
+          <img src="./img/carro21.jpeg" alt="carro" />
+          <div class="portfolio-hover"><span>Corporativo</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja1.jpeg" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja2.jpeg" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja3.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja4.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja5.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja6.jpeg" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja7.jpeg" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja8.jpeg" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja9.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja10.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja11.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja12.jpeg" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja13.jpeg" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja14.jpeg" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja15.jpeg" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja16.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja17.jpeg" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja18.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja19.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja20.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja21.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+         <div class="portfolio-item" data-cat="eventos">
+          <img src="./img/igreja22.JPEG" alt="Evento" />
+          <div class="portfolio-hover"><span>Eventos</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PORTFOLIO VÍDEOS ====== -->
+  <section id="videos" class="section-videos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Em movimento</span>
+        <h2 class="section-title">Vídeos</h2>
+      </div>
+      <div class="videos-grid">
+        <div class="video-card reveal">
+          <div class="video-thumb">
+            <video src="./img/vIgreja2.mp4" muted loop playsinline preload="auto"></video>
+            <div class="play-overlay">
+              <button class="play-btn" aria-label="Reproduzir">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <p class="video-label">Culto</p>
+        </div>
+        <div class="video-card reveal">
+          <div class="video-thumb">
+            <video src="./img/vIgreja1.mp4" muted loop playsinline preload="auto"></video>
+            <div class="play-overlay">
+              <button class="play-btn" aria-label="Reproduzir">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <p class="video-label">Culto</p>
+        </div>
+        <div class="video-card reveal">
+          <div class="video-thumb">
+            <video src="./img/vCarro1.mp4" muted loop playsinline preload="auto"></video>
+            <div class="play-overlay">
+              <button class="play-btn" aria-label="Reproduzir">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <p class="video-label">Corp. Carro</p>
+        </div>
+        <div class="video-card reveal">
+          <div class="video-thumb">
+            <video src="./img/vIgreja3.mp4" muted loop playsinline preload="auto"></video>
+            <div class="play-overlay">
+              <button class="play-btn" aria-label="Reproduzir">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <p class="video-label">Culto</p>
+        </div>
+        <div class="video-card reveal">
+          <div class="video-thumb">
+            <video src="./img/vIgreja4.mp4" muted loop playsinline preload="auto"></video>
+            <div class="play-overlay">
+              <button class="play-btn" aria-label="Reproduzir">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <p class="video-label">Culto</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROCESSO ====== -->
+  <section id="processo" class="section-processo">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Como funciona</span>
+        <h2 class="section-title">Processo de Trabalho</h2>
+      </div>
+      <div class="processo-timeline">
+        <div class="processo-step reveal">
+          <div class="step-number">01</div>
+          <div class="step-line"></div>
+          <div class="step-content">
+            <h3>Contato</h3>
+            <p>Me conta sobre o seu evento, data, estilo e expectativas. Vamos conversar e entender sua visão.</p>
+          </div>
+        </div>
+        <div class="processo-step reveal">
+          <div class="step-number">02</div>
+          <div class="step-line"></div>
+          <div class="step-content">
+            <h3>Planejamento</h3>
+            <p>Alinhamos todos os detalhes: locação, roteiro, estilo, referências e contrato.</p>
+          </div>
+        </div>
+        <div class="processo-step reveal">
+          <div class="step-number">03</div>
+          <div class="step-line"></div>
+          <div class="step-content">
+            <h3>Sessão</h3>
+            <p>O dia do clique! Capturo cada momento com cuidado, atenção e muita sensibilidade artística.</p>
+          </div>
+        </div>
+        <div class="processo-step reveal">
+          <div class="step-number">04</div>
+          <div class="step-line last"></div>
+          <div class="step-content">
+            <h3>Entrega Final</h3>
+            <p>Edição cuidadosa e entrega das fotos em galeria digital exclusiva, prontas para serem lembradas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA ====== -->
+  <section id="contato" class="section-cta">
+    <div class="container cta-inner reveal">
+      <span class="section-label light">Vamos conversar</span>
+      <h2 class="cta-title">Vamos registrar seu próximo momento especial?</h2>
+      <p class="cta-sub">Entre em contato e vamos criar algo lindo juntos.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/5554992078985" target="_blank" class="btn btn-primary">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.18-1.62A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.22-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.87 1.02 1.04-3.77-.24-.39A9.93 9.93 0 012 12C2 6.47 6.47 2 12 2c2.67 0 5.17 1.04 7.06 2.94A9.93 9.93 0 0122 12c0 5.53-4.47 10-10 10zm5.45-7.6c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07a8.18 8.18 0 01-2.4-1.48 9.03 9.03 0 01-1.66-2.07c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.28-.19-.58-.34z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a href="https://www.instagram.com/juhh_mend1s/" target="_blank" class="btn btn-outline">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Ver no Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Julia Mendes</span>
+        <span class="footer-desc">Fotografia &amp; Arte</span>
+      </div>
+      <div class="footer-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://wa.me/5554992078985" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.18-1.62A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.22-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.87 1.02 1.04-3.77-.24-.39A9.93 9.93 0 012 12C2 6.47 6.47 2 12 2c2.67 0 5.17 1.04 7.06 2.94A9.93 9.93 0 0122 12c0 5.53-4.47 10-10 10zm5.45-7.6c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07a8.18 8.18 0 01-2.4-1.48 9.03 9.03 0 01-1.66-2.07c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.28-.19-.58-.34z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/juhh_mend1s/" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Julia Mendes Fotografia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
