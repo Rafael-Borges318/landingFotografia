@@ -5,6 +5,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ====== FOOTER: ano dinâmico ====== */
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
   /* ====== NAV: Scroll Behavior ====== */
   const navbar = document.getElementById('navbar');
   const onScroll = () => {
@@ -17,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.getElementById('hamburger');
   const navMobile = document.getElementById('navMobile');
   hamburger.addEventListener('click', () => {
-    navMobile.classList.toggle('open');
+    const isOpen = navMobile.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
   });
   document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', () => navMobile.classList.remove('open'));
@@ -101,25 +106,73 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ====== PORTFOLIO FILTER ====== */
+  /* ====== PORTFOLIO: filtro + "ver mais" ======
+     Em vez de jogar as ~48 fotos na tela de uma vez,
+     mostramos um primeiro lote e revelamos o resto aos
+     poucos — por filtro e sob demanda, com uma entrada
+     em cascata (stagger) em vez de um bloco só. */
+  const PORTFOLIO_PAGE_SIZE = 12;
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
+  const portfolioMoreBtn = document.getElementById('portfolioMore');
+
+  let activeFilter = 'all';
+  let visibleCount = PORTFOLIO_PAGE_SIZE;
+
+  const matchesActiveFilter = item => activeFilter === 'all' || item.dataset.cat === activeFilter;
+
+  function renderPortfolio(revealFrom) {
+    const matches = portfolioItems.filter(matchesActiveFilter);
+
+    portfolioItems.forEach(item => item.classList.add('hidden'));
+
+    matches.slice(0, visibleCount).forEach((item, i) => {
+      item.classList.remove('hidden');
+      if (i >= revealFrom) {
+        item.style.animation = 'none';
+        void item.offsetWidth; // reinicia a animação
+        item.style.animationDelay = `${(i - revealFrom) * 60}ms`;
+        item.style.animation = 'fadeUp 0.5s var(--ease-out) both';
+      }
+    });
+
+    if (portfolioMoreBtn) {
+      portfolioMoreBtn.style.display = matches.length > visibleCount ? 'inline-flex' : 'none';
+    }
+  }
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      portfolioItems.forEach(item => {
-        if (filter === 'all' || item.dataset.cat === filter) {
-          item.classList.remove('hidden');
-          item.style.animation = 'fadeUp 0.5s ease both';
-        } else {
-          item.classList.add('hidden');
-        }
-      });
+      activeFilter = btn.dataset.filter;
+      visibleCount = PORTFOLIO_PAGE_SIZE;
+      renderPortfolio(0);
     });
   });
+
+  if (portfolioMoreBtn) {
+    portfolioMoreBtn.addEventListener('click', () => {
+      const revealFrom = visibleCount;
+      visibleCount += PORTFOLIO_PAGE_SIZE;
+      renderPortfolio(revealFrom);
+    });
+  }
+
+  // Só revela (e anima) o primeiro lote quando a seção entra na tela,
+  // em vez de despejar tudo assim que a página carrega.
+  const portfolioGrid = document.getElementById('portfolioGrid');
+  if (portfolioGrid) {
+    const portfolioObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          renderPortfolio(0);
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+    portfolioObserver.observe(portfolioGrid);
+  }
 
   /* ====== VÍDEOS: hover (desktop) e click/tap (mobile) ====== */
   const isTouch = () => window.matchMedia('(hover: none)').matches;

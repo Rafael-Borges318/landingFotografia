@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Júlia Mendes · Fotografia</title>
+  <meta name="description" content="Júlia Mendes Fotografia — ensaios, eventos e cobertura corporativa com um olhar autêntico e sensível. Solicite seu orçamento pelo WhatsApp." />
+  <meta property="og:title" content="Júlia Mendes · Fotografia" />
+  <meta property="og:description" content="Transformando momentos em memórias eternas. Ensaios, eventos e cobertura corporativa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./img/fotografa.png" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23281f20'/%3E%3Cpath d='M8 7l1.2-2h5.6L16 7h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2z' fill='none' stroke='%23fcf6d2' stroke-width='1.3'/%3E%3Ccircle cx='12' cy='13' r='3.1' fill='none' stroke='%23fcf6d2' stroke-width='1.3'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -22,7 +28,7 @@
         <a href="#processo">Processo</a>
         <a href="#contato" class="nav-cta">Orçamento</a>
       </nav>
-      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navMobile">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -94,13 +100,12 @@
         <span class="section-label">Prazer, eu sou</span>
         <h2 class="section-title">Júlia Mendes</h2>
         <p class="sobre-bio">
-          Fotógrafa apaixonada por histórias reais, emoções autênticas e a beleza que existe nos detalhes. 
-          Com mais de 2 anos de experiência, já registrei centenas de casamentos, ensaios e momentos especiais 
-          que as pessoas guardam para sempre.
+          Fotógrafa apaixonada por histórias reais, emoções autênticas e pela beleza dos detalhes.
+
+          Há 2 anos, transformo meu olhar em registros que preservam momentos e sentimentos para sempre. Mais do que fotografar, busco criar conexões genuínas para que cada imagem conte, de forma leve e verdadeira, a história de quem está diante da minha câmera.
         </p>
         <p class="sobre-bio">
-          Meu trabalho vai além do clique — é sobre criar uma conexão genuína com cada cliente, 
-          para que as fotos reflitam exatamente quem vocês são.
+          Meu trabalho vai além do clique — é sobre criar uma conexão genuína com cada cliente, para que as fotos reflitam exatamente quem vocês são.
         </p>
         <div class="sobre-stats">
           <div class="stat">
@@ -131,207 +136,209 @@
       <!-- Filtros -->
       <div class="portfolio-filters reveal">
         <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="casamentos">Casamentos</button>
         <button class="filter-btn" data-filter="ensaios">Ensaios</button>
         <button class="filter-btn" data-filter="eventos">Eventos</button>
-        <button class="filter-btn" data-filter="familia">Família</button>
         <button class="filter-btn" data-filter="corporativo">Corporativo</button>
       </div>
 
       <!-- Masonry Grid -->
       <div class="portfolio-grid" id="portfolioGrid">
         <div class="portfolio-item" data-cat="ensaios">
-          <img src="./img/pessoa1.jpeg" alt="pessoa" />
-          <div class="portfolio-hover"><span>Eventos</span></div>
+          <img loading="lazy" decoding="async" src="./img/pessoa1.jpeg" alt="Ensaio fotográfico de retrato" />
+          <div class="portfolio-hover"><span>Ensaios</span></div>
         </div>
         <div class="portfolio-item tall" data-cat="ensaios">
-          <img src="./img/pessoa2.jpeg" alt="pessoa" />
-          <div class="portfolio-hover"><span>Eventos</span></div>
+          <img loading="lazy" decoding="async" src="./img/pessoa2.jpeg" alt="Ensaio fotográfico de retrato" />
+          <div class="portfolio-hover"><span>Ensaios</span></div>
         </div>
         <div class="portfolio-item" data-cat="ensaios">
-          <img src="./img/pessoa3.jpeg" alt="pessoa" />
-          <div class="portfolio-hover"><span>Eventos</span></div>
+          <img loading="lazy" decoding="async" src="./img/pessoa3.jpeg" alt="Ensaio fotográfico de retrato" />
+          <div class="portfolio-hover"><span>Ensaios</span></div>
         </div>
         <div class="portfolio-item wide" data-cat="ensaios">
-          <img src="./img/pessoa4.jpeg" alt="pessoa" />
-          <div class="portfolio-hover"><span>Eventos</span></div>
+          <img loading="lazy" decoding="async" src="./img/pessoa4.jpeg" alt="Ensaio fotográfico de retrato" />
+          <div class="portfolio-hover"><span>Ensaios</span></div>
         </div>
         <div class="portfolio-item" data-cat="ensaios">
-          <img src="./img/pessoa5.jpeg" alt="pessoa" />
-          <div class="portfolio-hover"><span>Eventos</span></div>
+          <img loading="lazy" decoding="async" src="./img/pessoa5.jpeg" alt="Ensaio fotográfico de retrato" />
+          <div class="portfolio-hover"><span>Ensaios</span></div>
         </div>
         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro24.jpeg" alt="carro" />
+          <img loading="lazy" decoding="async" src="./img/carro24.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
         <div class="portfolio-item tall" data-cat="corporativo">
-          <img src="./img/carro23.jpeg" alt="carro" />
+          <img loading="lazy" decoding="async" src="./img/carro23.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro23.jpeg" alt="carro" />
+          <img loading="lazy" decoding="async" src="./img/carro17.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro22.jpeg" alt="carro" />
+          <img loading="lazy" decoding="async" src="./img/carro22.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
          <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro4.jpeg" alt="carro" />
+          <img loading="lazy" decoding="async" src="./img/carro4.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
          <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro5.jpeg" alt="carro" />
+          <img loading="lazy" decoding="async" src="./img/carro5.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
          <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro6.jpeg" alt="carro" />
+          <img loading="lazy" decoding="async" src="./img/carro6.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro7.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro7.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro8.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro8.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro9.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro9.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro10.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro10.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro11.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro11.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro12.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro12.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro13.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro13.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro14.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro14.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro15.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro15.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro16.jpeg" alt="Casamento 1" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro16.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro18.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro18.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro19.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro19.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro20.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro20.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="corporativo">
-          <img src="./img/carro21.jpeg" alt="carro" />
+         <div class="portfolio-item hidden" data-cat="corporativo">
+          <img loading="lazy" decoding="async" src="./img/carro21.jpeg" alt="Cobertura fotográfica corporativa" />
           <div class="portfolio-hover"><span>Corporativo</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja1.jpeg" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja1.jpeg" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja2.jpeg" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja2.jpeg" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja3.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja3.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja4.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja4.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja5.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja5.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja6.jpeg" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja6.jpeg" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja7.jpeg" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja7.jpeg" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja8.jpeg" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja8.jpeg" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja9.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja9.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja10.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja10.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja11.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja11.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja12.jpeg" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja12.jpeg" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja13.jpeg" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja13.jpeg" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja14.jpeg" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja14.jpeg" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja15.jpeg" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja15.jpeg" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja16.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja16.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja17.jpeg" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja17.jpeg" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja18.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja18.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja19.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja19.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja20.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja20.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja21.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja21.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
-         <div class="portfolio-item" data-cat="eventos">
-          <img src="./img/igreja22.JPEG" alt="Evento" />
+         <div class="portfolio-item hidden" data-cat="eventos">
+          <img loading="lazy" decoding="async" src="./img/igreja22.JPEG" alt="Cobertura fotográfica de evento" />
           <div class="portfolio-hover"><span>Eventos</span></div>
         </div>
+      </div>
+
+      <div class="portfolio-more">
+        <button class="btn btn-outline" id="portfolioMore">Ver mais fotos</button>
       </div>
     </div>
   </section>
@@ -346,7 +353,7 @@
       <div class="videos-grid">
         <div class="video-card reveal">
           <div class="video-thumb">
-            <video src="./img/vIgreja2.mp4" muted loop playsinline preload="auto"></video>
+            <video src="./img/vIgreja2.mp4" muted loop playsinline preload="metadata"></video>
             <div class="play-overlay">
               <button class="play-btn" aria-label="Reproduzir">
                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
@@ -357,7 +364,7 @@
         </div>
         <div class="video-card reveal">
           <div class="video-thumb">
-            <video src="./img/vIgreja1.mp4" muted loop playsinline preload="auto"></video>
+            <video src="./img/vIgreja1.mp4" muted loop playsinline preload="metadata"></video>
             <div class="play-overlay">
               <button class="play-btn" aria-label="Reproduzir">
                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
@@ -368,7 +375,7 @@
         </div>
         <div class="video-card reveal">
           <div class="video-thumb">
-            <video src="./img/vCarro1.mp4" muted loop playsinline preload="auto"></video>
+            <video src="./img/vCarro1.mp4" muted loop playsinline preload="metadata"></video>
             <div class="play-overlay">
               <button class="play-btn" aria-label="Reproduzir">
                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
@@ -379,7 +386,7 @@
         </div>
         <div class="video-card reveal">
           <div class="video-thumb">
-            <video src="./img/vIgreja3.mp4" muted loop playsinline preload="auto"></video>
+            <video src="./img/vIgreja3.mp4" muted loop playsinline preload="metadata"></video>
             <div class="play-overlay">
               <button class="play-btn" aria-label="Reproduzir">
                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
@@ -390,7 +397,7 @@
         </div>
         <div class="video-card reveal">
           <div class="video-thumb">
-            <video src="./img/vIgreja4.mp4" muted loop playsinline preload="auto"></video>
+            <video src="./img/vIgreja4.mp4" muted loop playsinline preload="metadata"></video>
             <div class="play-overlay">
               <button class="play-btn" aria-label="Reproduzir">
                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
@@ -489,7 +496,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Júlia Mendes Fotografia. Todos os direitos reservados.</p>
+      <p>&copy; <span id="year">2026</span> Júlia Mendes Fotografia. Todos os direitos reservados.</p>
     </div>
   </footer>
 
