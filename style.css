@@ -1,10 +1,4 @@
-/* =============================================
-   JULIA MENDES · FOTOGRAFIA
-   style.css — Tailwind não é necessário aqui;
-   usamos CSS puro com variáveis e utilidades
-   ============================================= */
 
-/* ---- TOKENS ---- */
 :root {
   --cream:    #fcf6d2;
   --cream2:   #fcf6d2;
@@ -19,7 +13,6 @@
   --trans: 0.45s var(--ease-out);
 }
 
-/* ---- RESET ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -33,7 +26,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-/* ---- FOCO DE TECLADO ---- */
 a:focus-visible,
 button:focus-visible,
 .dot:focus-visible {
@@ -42,7 +34,6 @@ button:focus-visible,
   border-radius: 2px;
 }
 
-/* ---- MOVIMENTO REDUZIDO ---- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -53,10 +44,8 @@ button:focus-visible,
   }
 }
 
-/* ---- CONTAINER ---- */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-/* ---- SECTION LABELS ---- */
 .section-label {
   display: block;
   font-family: var(--ff-body);
@@ -77,9 +66,6 @@ button:focus-visible,
 }
 .section-header { margin-bottom: 3.5rem; }
 
-/* ============================
-   NAV
-============================ */
 #navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -161,9 +147,6 @@ button:focus-visible,
   font-weight: 400;
 }
 
-/* ============================
-   HERO / CAROUSEL
-============================ */
 #hero { height: 100vh; min-height: 600px; position: relative; overflow: hidden; }
 
 .carousel { width: 100%; height: 100%; position: relative; }
@@ -186,7 +169,6 @@ button:focus-visible,
   );
 }
 
-/* Dots */
 .carousel-dots {
   position: absolute;
   bottom: 2rem;
@@ -205,7 +187,6 @@ button:focus-visible,
 }
 .dot.active { background: var(--cream); transform: scale(1.4); }
 
-/* Arrows */
 .carousel-arrow {
   position: absolute;
   top: 50%; transform: translateY(-50%);
@@ -223,7 +204,6 @@ button:focus-visible,
 .carousel-prev { left: 2rem; }
 .carousel-next { right: 2rem; }
 
-/* Hero Overlay */
 .hero-overlay {
   position: absolute;
   bottom: 12%;
@@ -264,12 +244,6 @@ button:focus-visible,
   animation: fadeUp 1s 0.3s var(--ease-out) both;
 }
 
-/* ============================
-   MIRA DE FOCO — assinatura visual
-   Cantos de visor de câmera: sempre presentes
-   no hero (a cena enquadrada) e "travam o foco"
-   ao passar o mouse no portfólio e nos vídeos.
-============================ */
 #hero::before,
 #hero::after {
   content: '';
@@ -330,9 +304,6 @@ button:focus-visible,
   transform: scale(1);
 }
 
-/* ============================
-   BUTTONS
-============================ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -365,9 +336,6 @@ button:focus-visible,
 
 .btn-icon { width: 18px; height: 18px; flex-shrink: 0; }
 
-/* ============================
-   SOBRE
-============================ */
 .section-sobre {
   padding: 9rem 0;
   background: var(--cream);
@@ -424,9 +392,6 @@ button:focus-visible,
   color: var(--sage);
 }
 
-/* ============================
-   PORTFOLIO
-============================ */
 .section-portfolio {
   padding: 9rem 0;
   background: var(--peach);
@@ -456,7 +421,6 @@ button:focus-visible,
   border-color: var(--dark);
 }
 
-/* Masonry */
 .portfolio-grid {
   columns: 3;
   column-gap: 1rem;
@@ -504,9 +468,6 @@ button:focus-visible,
   margin-top: 3rem;
 }
 
-/* ============================
-   VÍDEOS
-============================ */
 .section-videos {
   padding: 9rem 0;
   background: var(--cream);
@@ -565,9 +526,6 @@ button:focus-visible,
   font-style: italic;
 }
 
-/* ============================
-   PROCESSO
-============================ */
 .section-processo {
   padding: 9rem 0;
   background: var(--peach);
@@ -629,9 +587,6 @@ button:focus-visible,
   color: rgba(40,31,32,0.75);
 }
 
-/* ============================
-   CTA
-============================ */
 .section-cta {
   padding: 9rem 0;
   background: var(--dark);
@@ -682,9 +637,6 @@ button:focus-visible,
 }
 .section-cta .btn-outline:hover { background: rgba(252,246,210,0.08); border-color: var(--cream); }
 
-/* ============================
-   FOOTER
-============================ */
 #footer {
   background: var(--dark);
   border-top: 1px solid rgba(198,195,154,0.2);
@@ -754,9 +706,6 @@ button:focus-visible,
   color: rgba(252,246,210,0.3);
 }
 
-/* ============================
-   REVEAL ANIMATION
-============================ */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -772,9 +721,6 @@ button:focus-visible,
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================
-   RESPONSIVE
-============================ */
 @media (max-width: 1024px) {
   .sobre-grid { grid-template-columns: 1fr; gap: 4rem; }
   .sobre-img-wrap { max-width: 480px; margin: 0 auto; }

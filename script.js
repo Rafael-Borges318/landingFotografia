@@ -1,24 +1,17 @@
-/* =============================================
-   JULIA MENDES · FOTOGRAFIA
-   main.js — Carousel, Nav, Scroll, Filters
-   ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ====== FOOTER: ano dinâmico ====== */
-  const yearEl = document.getElementById('year');
+    const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ====== NAV: Scroll Behavior ====== */
-  const navbar = document.getElementById('navbar');
+    const navbar = document.getElementById('navbar');
   const onScroll = () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* ====== NAV: Hamburger ====== */
-  const hamburger = document.getElementById('hamburger');
+    const hamburger = document.getElementById('hamburger');
   const navMobile = document.getElementById('navMobile');
   hamburger.addEventListener('click', () => {
     const isOpen = navMobile.classList.toggle('open');
@@ -28,15 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => navMobile.classList.remove('open'));
   });
 
-  /* ====== CAROUSEL ====== */
-  const track = document.getElementById('carouselTrack');
+    const track = document.getElementById('carouselTrack');
   const dotsContainer = document.getElementById('carouselDots');
   const slides = document.querySelectorAll('.carousel-slide');
   const total = slides.length;
   let current = 0;
   let autoTimer = null;
 
-  // Build dots
   slides.forEach((_, i) => {
     const dot = document.createElement('button');
     dot.classList.add('dot');
@@ -66,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     resetAuto();
   });
 
-  // Touch / Swipe
   let touchStartX = 0;
   track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
   track.addEventListener('touchend', e => {
@@ -74,13 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); resetAuto(); }
   });
 
-  // Auto-play
   function startAuto() { autoTimer = setInterval(next, 5000); }
   function resetAuto() { clearInterval(autoTimer); startAuto(); }
   startAuto();
 
-  /* ====== REVEAL ON SCROLL ====== */
-  const reveals = document.querySelectorAll('.reveal');
+    const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -91,8 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.12 });
   reveals.forEach(el => observer.observe(el));
 
-  /* ====== PORTFOLIO: sincroniza label do hover com data-cat ====== */
-  const catLabels = {
+    const catLabels = {
     casamentos: 'Casamentos',
     ensaios: 'Ensaios',
     eventos: 'Eventos',
@@ -106,12 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ====== PORTFOLIO: filtro + "ver mais" ======
-     Em vez de jogar as ~48 fotos na tela de uma vez,
-     mostramos um primeiro lote e revelamos o resto aos
-     poucos — por filtro e sob demanda, com uma entrada
-     em cascata (stagger) em vez de um bloco só. */
-  const PORTFOLIO_PAGE_SIZE = 12;
+    const PORTFOLIO_PAGE_SIZE = 12;
   const filterBtns = document.querySelectorAll('.filter-btn');
   const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
   const portfolioMoreBtn = document.getElementById('portfolioMore');
@@ -130,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.remove('hidden');
       if (i >= revealFrom) {
         item.style.animation = 'none';
-        void item.offsetWidth; // reinicia a animação
+        void item.offsetWidth;
         item.style.animationDelay = `${(i - revealFrom) * 60}ms`;
         item.style.animation = 'fadeUp 0.5s var(--ease-out) both';
       }
@@ -159,8 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Só revela (e anima) o primeiro lote quando a seção entra na tela,
-  // em vez de despejar tudo assim que a página carrega.
   const portfolioGrid = document.getElementById('portfolioGrid');
   if (portfolioGrid) {
     const portfolioObserver = new IntersectionObserver((entries, obs) => {
@@ -174,15 +154,13 @@ document.addEventListener('DOMContentLoaded', () => {
     portfolioObserver.observe(portfolioGrid);
   }
 
-  /* ====== VÍDEOS: hover (desktop) e click/tap (mobile) ====== */
-  const isTouch = () => window.matchMedia('(hover: none)').matches;
+    const isTouch = () => window.matchMedia('(hover: none)').matches;
 
   document.querySelectorAll('.video-thumb').forEach(thumb => {
     const video = thumb.querySelector('video');
     const overlay = thumb.querySelector('.play-overlay');
     if (!video) return;
 
-    // Força decodificação do primeiro frame via play+pause imediato
     const grabThumb = () => {
       video.play().then(() => {
         video.pause();
@@ -198,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (isTouch()) {
-      // Mobile: toque para play/pause com zoom
       thumb.addEventListener('click', () => {
         if (video.paused) {
           document.querySelectorAll('.video-thumb').forEach(t => {
@@ -220,7 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     } else {
-      // Desktop: hover para play
       thumb.addEventListener('mouseenter', () => {
         video.play();
         overlay.classList.add('hidden');
@@ -232,8 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ====== SMOOTH SCROLL for all internal links ====== */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       e.preventDefault();
       const target = document.querySelector(anchor.getAttribute('href'));
